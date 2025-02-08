@@ -4,6 +4,10 @@
 import pygame
 from constants import *
 
+clock = pygame.time.Clock()
+dt = 0
+
+
 
 def main():
   print("Starting asteroids!")
@@ -20,6 +24,7 @@ def main():
 
         screen.fill("black")
         pygame.display.flip()
+        dt = clock.tick(60) / 1000
 
   pygame.quit()
 
